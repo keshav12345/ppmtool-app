@@ -1,0 +1,20 @@
+package com.example.demo.domain;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+
+@Entity
+public class ProjectTask {
+	private long id;
+	private String projectSequence;
+	private String summary;
+	private String acceptanceCriteria;
+	private String status;
+	private Integer priority;
+	private Date dueDate;
+	private String projectIdentifier;
+	private Date create_At;
+	private Date update_At;
+
+}

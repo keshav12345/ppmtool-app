@@ -12,7 +12,6 @@
 <fullyQualifiedTypeName name="com.example.demo.repository.ProjectRepository"/>
 <fullyQualifiedTypeName name="com.example.demo.service.ProjectService"/>
 <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
-<fullyQualifiedTypeName name="com.example.demo.domain.Project"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
@@ -34,4 +33,5 @@
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
 <fullyQualifiedTypeName name="javax.persistence.Entity"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="com.example.demo.domain.Project"/>
 </qualifiedTypeNameHistroy>

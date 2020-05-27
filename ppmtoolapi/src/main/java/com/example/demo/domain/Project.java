@@ -2,11 +2,14 @@ package com.example.demo.domain;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.validation.constraints.NotBlank;
@@ -19,7 +22,7 @@ public class Project {
 	@SuppressWarnings("unused")
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 	@NotBlank(message = "Project name is required")
 	private String projectName;
 	@NotBlank(message = "Project identifier is required")
@@ -36,13 +39,15 @@ public class Project {
 	private Date created_at ;
 	@JsonFormat(pattern ="yyy-MM-dd")
 	private Date update_at;
+	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "project")
+	private Backlog backlog;
 	public Project() {
 		// TODO Auto-generated constructor stub
 	}
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getProjectName() {
@@ -82,6 +87,12 @@ public class Project {
 	@PreUpdate
 	protected void onUpdate() {
 		this.update_at=new Date();
+	}
+	public Backlog getBacklog() {
+		return backlog;
+	}
+	public void setBacklog(Backlog backlog) {
+		this.backlog = backlog;
 	}
 	
 
