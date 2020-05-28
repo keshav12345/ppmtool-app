@@ -103,13 +103,13 @@ public class ProjectTaskService {
 		return projectTaskRepository.save(projectTask);
 	}
 
-	public void deletePTByProjectSequence(String backlog_id, String pt_id) {
-
+	public void deletePTByProjectSequence(String backlog_id,String pt_id) {
+		
 		// find the project task
 		ProjectTask projectTask = findPTByProjectSequence(backlog_id, pt_id);
-		Backlog backlog = projectTask.getBacklog();
-
-		List<ProjectTask> pts = backlog.getProjectTasks();
+		Backlog backlog =projectTask.getBacklog();
+		
+		List<ProjectTask> pts =backlog.getProjectTasks();
 		pts.remove(projectTask);
 		backlogRepository.save(backlog);
 		projectTaskRepository.delete(projectTask);

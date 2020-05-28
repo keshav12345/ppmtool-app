@@ -1,7 +1,5 @@
 package com.example.demo.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -39,8 +37,8 @@ public class ProjectTaskService {
 			backlogSequence++;
 			backlog.setPTSequence(backlogSequence);
 			// Add Backlog sequence to ProjectTask
-			projectTask.setProjectSequence(projectIdentifier.toUpperCase() + "-" + backlogSequence);
-			projectTask.setProjectIdentifier(projectIdentifier.toUpperCase());
+			projectTask.setProjectSequence(projectIdentifier + "-" + backlogSequence);
+			projectTask.setProjectIdentifier(projectIdentifier);
 			// setting default priority and status
 
 			if (projectTask.getPriority() == null) {
@@ -103,15 +101,8 @@ public class ProjectTaskService {
 		return projectTaskRepository.save(projectTask);
 	}
 
-	public void deletePTByProjectSequence(String backlog_id, String pt_id) {
-
-		// find the project task
-		ProjectTask projectTask = findPTByProjectSequence(backlog_id, pt_id);
-		Backlog backlog = projectTask.getBacklog();
-
-		List<ProjectTask> pts = backlog.getProjectTasks();
-		pts.remove(projectTask);
-		backlogRepository.save(backlog);
-		projectTaskRepository.delete(projectTask);
+	public void deletePTByProjectSequence(String backlog_id,String pt_id) {
+		ProjectTask projectTask=findPTByProjectSequence(backlog_id, pt_id)
 	}
+
 }
