@@ -8,7 +8,7 @@ export default function(state = initialState, action) {
   switch (action.type) {
     case GET_PROJECTS:
       return {
-        ...state,           //this.state.projects=state.project or ...state (both are same)
+        ...state,           //this.state.projects=state.project or ...state (both are same) //this is for preserving old data of the state in the store
         projects: action.payload
       };
       case GET_PROJECT:

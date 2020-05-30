@@ -25,7 +25,6 @@
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
 <fullyQualifiedTypeName name="com.example.demo.exception.ProjectIdException"/>
 <fullyQualifiedTypeName name="java.lang.Iterable"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
 <fullyQualifiedTypeName name="javax.persistence.Entity"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
@@ -33,8 +32,12 @@
 <fullyQualifiedTypeName name="com.example.demo.domain.Project"/>
 <fullyQualifiedTypeName name="com.example.demo.repository.ProjectRepository"/>
 <fullyQualifiedTypeName name="antlr.collections.List"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseStatus"/>
-<fullyQualifiedTypeName name="com.example.demo.exception.ProjectNotFoundException"/>
 <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+<fullyQualifiedTypeName name="com.example.demo.domain.Backlog"/>
+<fullyQualifiedTypeName name="com.example.demo.exception.ProjectNotFoundException"/>
+<fullyQualifiedTypeName name="com.example.demo.domain.ProjectTask"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PatchMapping"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
 </qualifiedTypeNameHistroy>
